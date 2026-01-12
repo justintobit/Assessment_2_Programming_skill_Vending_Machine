@@ -20,6 +20,8 @@ def prices(product, price): # function to calculate the money
            print("----------------")
            remaining= float(input(f"Enter the remaining amount ${x}: "))
            money += remaining
+           y= money - price
+           print(f"Payment accepted. Your Change: ${y} \nEnjoy your {product}!")
            
     else:
         print("Payment not accepted")
@@ -37,19 +39,19 @@ def main(): # Function to display and user input
     print("")
     print("------------ITEMS------------")
     items = {
-            12: ('Apple Juice', 4.00),
-            23: ('Orange Juice',4.00),
-            34: ('Mango Juice',4.00),
-            45: ('Lays salt', 1.19),
-            56: ('Lays Spicy',1.19),
-            67: ('Lays Cheese',1.19),
-            78: ('Snickers', 4.00),
-            89: ('Twix', 2.75),
-            99: ('KitKat', 2.00),
+            1: ('Apple Juice', 4.00),
+            2: ('Orange Juice',4.00),
+            3: ('Mango Juice',4.00),
+            4: ('Lays salt', 1.19),
+            5: ('Lays Spicy',1.19),
+            6: ('Lays Cheese',1.19),
+            7: ('Snickers', 4.00),
+            8: ('Twix', 2.75),
+            9: ('KitKat', 2.00),
             10: ('M&M', 4.25),
-            24: ('Water', 1.00),
-            14: ('Coca Cola', 3.25),
-            17: ('Pepsi', 3.25)
+            11: ('Water', 1.00),
+            12: ('Coca Cola', 3.25),
+            13: ('Pepsi', 3.25)
                 }
     for key, (product,price) in items.items():
             print(f"{key}: {product} = ${price}")
@@ -62,7 +64,7 @@ def main(): # Function to display and user input
     show= ui in items#declares the user input 
     if show==True:
         print("----------------")
-        print(product,'-','$',price)
+        print(product,'-','$',price)        
         prices(product,price)
     else:
         print("Invalid Input")
